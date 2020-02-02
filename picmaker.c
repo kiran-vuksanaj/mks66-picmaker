@@ -15,13 +15,11 @@ int main(){
   int y,x;
   fd = open(IMG_FILENAME,O_CREAT|O_TRUNC|O_WRONLY,0644);
   write_asciiheader(fd);
-  r = 128;
-  g = 255;
-  b = 255;
+  r = 70;
   for( y=0; y < 500; y++ ){
-    // b = y/500.0 * 255;
+    b = y/500.0 * 255;
     for( x=0; x < 500; x++ ){
-      // g = x/500.0 * 255;
+      g = x/500.0 * 255;
       write_pixel(fd,(int)r,(int)g,(int)b);
     }
     write(fd,"\n",1);
