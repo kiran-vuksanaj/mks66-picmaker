@@ -30,7 +30,7 @@ int main(){
 }
 
 void write_asciiheader(int fd){
-  const char *header = "P6\n500 500\n255\n";
+  const char *header = "P3\n500 500\n255\n";
   write(fd,header,strlen(header));
 }
 
