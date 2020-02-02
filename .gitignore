@@ -1,3 +1,5 @@
+# executable binaries
+pmaker
 
 # Created by https://www.gitignore.io/api/emacs,c,images
 # Edit at https://www.gitignore.io/?templates=emacs,c,images
@@ -171,5 +173,8 @@ flycheck_*.el
 # 3D Images
 *.3dm
 *.max
+
+# (kiran) ppm images
+*.ppm
 
 # End of https://www.gitignore.io/api/emacs,c,images
