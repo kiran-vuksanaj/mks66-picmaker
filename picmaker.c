@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <fcntl.h>
+#include <string.h>
 
 #define IMG_FILENAME "image.ppm"
 
@@ -24,4 +25,15 @@ int main(){
     write(fd,"\n",1);
   }
   close(fd);
+}
+
+void write_asciiheader(int fd){
+  const char *header = "P6\n500 500\n";
+  write(fd,header,strlen(header));
+}
+
+void write_pixel(int fd,int r,int g,int b){
+  char buf[13];
+  sprintf(buf,"%d %d %d ",r,g,b);
+  write(fd,buf,strlen(buf));
 }
